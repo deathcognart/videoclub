@@ -14,8 +14,8 @@ INSERT INTO realisateur(id, nom, prenom)
 VALUES ('1','Ian','Bryce');
 
 -- affiche le film
-SELECT film.nom, genre, annee, r.nom, r.prenom
+SELECT film.nom as Titre, genre, annee, r.nom, r.prenom
 FROM film
-LEFT JOIN genre g on film.genre_id = g.id
-LEFT JOIN année a on film.annee_id= a.id
-LEFT JOIN realisateur r on film.realisateur_id = r.id
+         LEFT JOIN genre g on film.genre_id = g.id
+         LEFT JOIN année a on film.annee_id= a.id
+         LEFT JOIN realisateur r on film.realisateur_id = r.id
